@@ -1,0 +1,12 @@
+.connexion {
+    display: flex;
+    justify-content: center;
+    margin-left: 200;
+    padding: 0;
+    background-color: #dcd5d5; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionnel : ombre pour esthétique */
+    width: 100%; /* Optionnel : ajuste la largeur */
+    max-width: 400px; /* Optionnel : limite la largeur */
+}

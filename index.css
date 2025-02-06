@@ -1,0 +1,93 @@
+.logo{
+    margin-right: 10%;    
+}
+.identification{
+    justify-content: right;
+    margin-left: 500px;
+}
+h3{
+    text-align: center;
+}
+
+h2{
+    text-align: center
+}
+/* Style de la barre de navigation */
+nav {
+    background-color: #577183; /* Couleur de fond */
+    padding: 15px;
+    display: flex;
+    justify-content: left;
+}
+
+/* Style des liens dans la barre de navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Couleur du texte */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Effet au survol */
+nav ul li a:hover {
+    background-color: #6e98b6; /* Couleur de survol */
+    color: #fff;
+}
+
+/* Conteneur principal pour la galerie */
+.movie-gallery  {
+    display: flex;
+    justify-content: left;
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 15px;
+    background-color: #f4f4f4;
+}
+
+/* Carte de film */
+.movie-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    overflow: hidden; /* Masque les débordements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Image du film */
+.movie-image {
+    width: 100%; /* L'image prend toute la largeur de la carte */
+    height: 300px; /* Hauteur fixe pour une présentation uniforme */
+    object-fit: cover; /* Ajuste l'image sans déformer */
+}
+
+/* Description */
+.movie-description {
+    padding: 10px;
+}
+
+.movie-description h5 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.movie-description p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
