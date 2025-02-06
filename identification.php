@@ -14,7 +14,7 @@
     <h3>Identification</h3>
 
     <div class="connexion">
-        <form action="traiter_identification.php" method = "POST">
+        <form action="traiter_identification.php" method = "POST" class="form">
             <label for="nom" id="nom" >Nom :</label>
             <input type="text" required class="form-label" for="nom" id="nom" name = "nom" ><br>
             <label for="prenoms" class ="form-label" for = "prenoms" >Prenom :</label>
