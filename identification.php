@@ -25,7 +25,7 @@
             <input type="password" required id= "password" name="password"><br>
             <label for="password" class="form-label" for="password_" >Confirmer mot de passe :</label>
             <input type="password" required id="password_" name="password_"><br>
-            <button>Soumettre</button>
+            <button type="button" class="btn btn-outline-primary">Soumettre</button>
         </form>
     </div>
 
