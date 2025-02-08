@@ -1,7 +1,7 @@
 <?php
 try {
     // Connexion à la base de données
-    $bdd = new PDO('mysql:host=localhost;dbname=Test;charset=utf8', 'root', 'Prince@#2006');
+    $bdd = new PDO('mysql:host=localhost; dbname=Cinema; charset=utf8', 'root', 'Prince@#2006');
 
     // Activer le mode d'erreur pour afficher les exceptions
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

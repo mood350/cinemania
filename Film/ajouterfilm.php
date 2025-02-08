@@ -1,11 +1,37 @@
+<?php include '../db.php';
+include 'nav.php';
+
+
+
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/le1.css">
+    <link rel="stylesheet" href="film.css">
     <title>Ajouter un film</title>
 </head>
 <body>
 <h2>Ajouterfilm</h2>
+    <div class="film">
+        <form method="POST" action="traiter_ajout_film.php" class="form">
+            <label for="nom" id="nom">Nom du film</label>
+            <input type="text" name="nom" class="form-label" id="nom" placeholder="Nom du film"><br>
+            <label for="synopsis" id="synopsis">Description</label>
+            <input type="text" name="synopsis" id="synopsis" class="form-label"  placeholder="Description"><br>
+            <label for="categorie" id="categorie">Categorie</label>
+            <input type="text" name="categorie" id="categorie" class="form-label" placeholder="Catégorie"><br>
+            <label for="duree" id="duree">Durée</label>
+            <input type="time" name="duree" placeholder="Durée du film"><br>
+            <label for="dateSortie" id="dateSortie">Date de sortie</label>
+            <input type="date" name="dateSortie" id="dateSortie"><br>
+            <input type="submit" value="Ajouter film"><br>
+        </form>
+    </div>
 </body>
 </html>

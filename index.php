@@ -1,25 +1,31 @@
+<?php include 'nav.php';
+include_once "db.php";
+
+$bdd = new PDO('mysql:host=localhost; dbname=Cinema; charset=utf8', 'root', 'Prince@#2006');
+$film = $bdd -> query("SELECT * FROM film");
+while ($sous_film =  $film-> fetch()){
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/le1.css">
+    <title>Accueil</title>
 </head>
 <body>
-    <?php include 'nav.php' ?>
+
     <div class="card" style="width: 18rem;">
-        <img src="photos/dune.jpeg" class="card-img-top" alt="...">
+        <img src="images/dune.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title"><?php echo $sous_film['titre']; ?></h5>
+            <p class="card-text"><?php echo $sous_film['synopsis']; ?></p>
+            <a href="Film/film.php?id=<?php echo $sous_film['id']; ?>" class="btn btn-primary" role="button">En savoir plus</a>
         </div>
     </div>
-<?php include'footer.php' ?>
+<?php
+}
+include'footer.php' ?>
 
 </body>
 </html>

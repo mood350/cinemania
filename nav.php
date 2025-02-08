@@ -1,7 +1,7 @@
 <nav>
         <div class="logo">
             <a href="index.php">
-                <img src="photos/clap.png" alt="Logo du site">
+                <img src="images/clap.png" alt="Logo du site">
             </a>
         </div>
         <ul>
@@ -10,3 +10,7 @@
             <li><a class = "identification" href="identification.php">Identification</a></li>
         </ul>
 </nav>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="identification.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/bootstrap/css/le1.css">

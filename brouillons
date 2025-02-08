@@ -1,0 +1,66 @@
+<?php
+include_once "db.php";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $titre = $_POST['titre'];
+    $synopsis = $_POST['synopsis'];
+    $categorie = $_POST['categorie'];
+    $duree = $_POST['duree'];
+    $date_sortie = $_POST['date_sortie'];
+
+    // Vérifier si un fichier a été téléchargé
+    if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+        // Obtenez le nom du fichier image
+        $image = $_FILES['image']['name'];
+
+        // Définir le dossier de destination pour l'image
+        $destination = 'photos/' . $image;
+
+        // Déplacer le fichier téléchargé dans le dossier photos
+        move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+
+        // Préparez l'insertion dans la base de données
+        $stmt = $bdd->prepare("INSERT INTO Film (titre, synopsis, categorie, duree, date_sortie, image)
+                               VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$titre, $synopsis, $categorie, $duree, $date_sortie, $image]);
+
+        echo "Film ajouté avec succès!";
+    } else {
+        echo "Erreur de téléchargement de l'image.";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un film</title>
+</head>
+<body>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    <label for="titre">Titre :</label>
+    <input type="text" name="titre" id="titre" required><br>
+
+    <label for="synopsis">Synopsis :</label>
+    <textarea name="synopsis" id="synopsis" required></textarea><br>
+
+    <label for="categorie">Catégorie :</label>
+    <input type="text" name="categorie" id="categorie" required><br>
+
+    <label for="duree">Durée :</label>
+    <input type="text" name="duree" id="duree" required><br>
+
+    <label for="date_sortie">Date de sortie :</label>
+    <input type="date" name="date_sortie" id="date_sortie" required><br>
+
+    <label for="image">Image du film :</label>
+    <input type="file" name="image" id="image" accept="image/*" required><br>
+
+    <input type="submit" value="Ajouter le film">
+</form>
+
+</body>
+</html>

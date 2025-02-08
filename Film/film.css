@@ -1,0 +1,66 @@
+/* Style général pour la div film */
+.film {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le formulaire */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style pour les labels */
+label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Style pour les inputs */
+input[type="text"],
+input[type="time"],
+input[type="date"],
+input[type="submit"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Style pour les inputs textuels */
+input[type="text"],
+input[type="time"],
+input[type="date"] {
+    width: 100%;
+}
+
+/* Style pour le bouton de soumission */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style pour les champs en focus */
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Espacement et alignement */
+br {
+    margin-bottom: 10px;
+}
