@@ -12,4 +12,5 @@
 </nav>
 <link rel="stylesheet" href="../index.css">
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/bootstrap/css/le1.css">
+<link rel="stylesheet" href="../assets/css/le1.css">
+<link rel="stylesheet" href="../assets/css/bootstrap.css">

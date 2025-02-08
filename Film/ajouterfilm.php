@@ -1,11 +1,6 @@
 <?php include '../db.php';
 include 'nav.php';
-
-
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,18 +14,22 @@ include 'nav.php';
 <body>
 <h2>Ajouterfilm</h2>
     <div class="film">
-        <form method="POST" action="traiter_ajout_film.php" class="form">
-            <label for="nom" id="nom">Nom du film</label>
-            <input type="text" name="nom" class="form-label" id="nom" placeholder="Nom du film"><br>
+        <form method="POST" action="traiter_ajout_film.php" class="form" enctype="multipart/form-data">
+            <label for="titre" id="titre">Nom du film</label>
+            <input type="text" name="titre" class="form-label" id="titre" placeholder="Titre du film"><br>
             <label for="synopsis" id="synopsis">Description</label>
             <input type="text" name="synopsis" id="synopsis" class="form-label"  placeholder="Description"><br>
             <label for="categorie" id="categorie">Categorie</label>
             <input type="text" name="categorie" id="categorie" class="form-label" placeholder="Catégorie"><br>
             <label for="duree" id="duree">Durée</label>
             <input type="time" name="duree" placeholder="Durée du film"><br>
-            <label for="dateSortie" id="dateSortie">Date de sortie</label>
-            <input type="date" name="dateSortie" id="dateSortie"><br>
-            <input type="submit" value="Ajouter film"><br>
+            <label for="date_sortie" id="date_sortie">Date de sortie</label>
+            <input type="date" name="date_sortie" id="date_sortie"><br>
+            <label for="image">Image du film :</label>
+            <input type="file" name="image" id="image"  required><br>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Ajouter un film</button>
+            </div>
         </form>
     </div>
 </body>
