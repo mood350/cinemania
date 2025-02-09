@@ -1,5 +1,4 @@
 <?php
-include_once "../db.php";
 include 'nav.php';
 
 try {

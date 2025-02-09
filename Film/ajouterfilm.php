@@ -16,15 +16,15 @@ include 'nav.php';
     <div class="film">
         <form method="POST" action="traiter_ajout_film.php" class="form" enctype="multipart/form-data">
             <label for="titre" id="titre">Nom du film</label>
-            <input type="text" name="titre" class="form-label" id="titre" placeholder="Titre du film"><br>
+            <input type="text" name="titre" class="form-label" id="titre" placeholder="Titre du film" required><br>
             <label for="synopsis" id="synopsis">Description</label>
-            <input type="text" name="synopsis" id="synopsis" class="form-label"  placeholder="Description"><br>
+            <input type="text" name="synopsis" id="synopsis" class="form-label"  placeholder="Description" required><br>
             <label for="categorie" id="categorie">Categorie</label>
-            <input type="text" name="categorie" id="categorie" class="form-label" placeholder="Catégorie"><br>
+            <input type="text" name="categorie" id="categorie" class="form-label" placeholder="Catégorie" required><br>
             <label for="duree" id="duree">Durée</label>
-            <input type="time" name="duree" placeholder="Durée du film"><br>
+            <input type="time" name="duree"  id = "duree" placeholder="Durée du film" required><br>
             <label for="date_sortie" id="date_sortie">Date de sortie</label>
-            <input type="date" name="date_sortie" id="date_sortie"><br>
+            <input type="date" name="date_sortie" id="date_sortie" required><br>
             <label for="image">Image du film :</label>
             <input type="file" name="image" id="image"  required><br>
             <div class="col-12">

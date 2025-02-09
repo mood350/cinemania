@@ -1,5 +1,6 @@
 <?php
 include 'nav.php';
+include 'caroussel.php';
 
 $bdd = new PDO('mysql:host=localhost; dbname=Cinema; charset=utf8', 'root', 'Prince@#2006');
 $film = $bdd->query("SELECT * FROM film");
@@ -27,8 +28,7 @@ $films = $film->fetchAll();
         </div>
     <?php } ?>
 </div>
-
-<?php include 'footer.php'; ?>
-
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<?php include 'footer.php';?>
 </body>
 </html>
